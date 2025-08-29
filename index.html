@@ -25,6 +25,7 @@
       color: var(--text);
       background: var(--bg);
       margin: 0;
+      padding-top: 120px; /* Space for fixed header */
     }
     .container {
       max-width: 1100px;
@@ -34,27 +35,28 @@
     header {
       background: linear-gradient(135deg, var(--primary), var(--accent));
       color: #fff;
-      padding: 32px 0 24px;
-      margin-bottom: 20px;
-    }
-    .brand {
+      padding: 16px 0;
       text-align: center;
+      position: fixed; top: 0; left: 0; width: 100%;
+      z-index: 1000;
+      box-shadow: 0 2px 10px rgba(0,0,0,.08);
     }
     .brand h1 {
-      margin: 0 0 8px;
-      font-size: 1.9rem;
+      margin: 0 0 6px;
+      font-size: 1.6rem;
       line-height: 1.3;
     }
-    .brand p {
-      margin: 4px 0;
-      opacity: 0.95;
+    .brand p { margin: 0; opacity: 0.95; }
+    .meta {
+      margin-top: 6px;
+      color: #e9f3ff;
+      font-size: .95rem;
     }
     nav {
-      display: flex;
-      justify-content: center;
-      gap: 18px;
-      margin-top: 14px;
+      display: inline-flex;
+      gap: 14px;
       flex-wrap: wrap;
+      margin-top: 10px;
     }
     nav a {
       color: #fff;
@@ -62,9 +64,9 @@
       font-weight: bold;
       padding: 6px 10px;
       border-radius: 999px;
-      border: 1px solid rgba(255,255,255,0.35);
+      border: 1px solid rgba(255,255,255,.35);
     }
-    nav a:hover { background: rgba(255,255,255,0.12); }
+    nav a:hover { background: rgba(255,255,255,.12); }
     .grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -76,6 +78,7 @@
       border: 1px solid var(--border);
       border-radius: var(--radius);
       padding: 20px;
+      margin-bottom: 18px;
     }
     h2 {
       color: var(--primary);
@@ -89,24 +92,6 @@
     }
     p { margin: 8px 0; }
     ul { margin: 8px 0 0 18px; }
-    .meta {
-      display: flex;
-      gap: 16px;
-      flex-wrap: wrap;
-      margin-top: 6px;
-      color: var(--muted);
-      font-size: 0.95rem;
-    }
-    .badge {
-      display: inline-block;
-      background: #eef6fb;
-      border: 1px solid #d6eaf6;
-      color: var(--accent);
-      border-radius: 999px;
-      padding: 2px 10px;
-      font-size: 0.9rem;
-      margin-left: 6px;
-    }
     .programme {
       width: 100%;
       border-collapse: collapse;
@@ -123,12 +108,13 @@
       background: #f2f7fb;
       color: var(--primary);
       text-align: left;
+      width: 140px;
     }
     .muted { color: var(--muted); }
     footer {
       text-align: center;
       padding: 22px;
-      margin-top: 24px;
+      margin-top: 6px;
       color: var(--muted);
     }
   </style>
@@ -138,17 +124,15 @@
     <div class="container brand">
       <h1>Smooth Transition from the LDC Category</h1>
       <p><strong>30–31 October 2025</strong> • Phnom Penh, Cambodia</p>
-      <div class="meta">
-        <span>Languages: English / Khmer <span class="badge">Interpretation provided</span></span>
-      </div>
+      <div class="meta">Languages: English / Khmer <span style="margin-left:6px;">• Interpretation provided</span></div>
       <nav>
-        <a href="#about">Home</a>
-        <a href="#objectives">Objectives</a>
-        <a href="#programme">Programme</a>
-        <a href="#organizers">Organizers</a>
-        <a href="#audience">Target audience</a>
-        <a href="faq.html">FAQs</a>
-        <a href="#contact">Contact</a>
+        <a href="/Cambodia_STS_workshop/#about">Home</a>
+        <a href="/Cambodia_STS_workshop/#objectives">Objectives</a>
+        <a href="/Cambodia_STS_workshop/#programme">Programme</a>
+        <a href="/Cambodia_STS_workshop/#organizers">Organizers</a>
+        <a href="/Cambodia_STS_workshop/#audience">Target audience</a>
+        <a href="/Cambodia_STS_workshop/faq.html">FAQs</a>
+        <a href="/Cambodia_STS_workshop/#contact">Contact</a>
       </nav>
     </div>
   </header>
@@ -170,7 +154,7 @@
       </div>
     </section>
 
-    <section id="objectives" class="card" style="margin-top:18px;">
+    <section id="objectives" class="card">
       <h2>Objectives</h2>
       <ul>
         <li>Provide Cambodia exposure to experiences of graduated and graduating countries (e.g., Bangladesh, Bhutan, Lao PDR, Nepal, Senegal) and UN entities supporting graduating countries.</li>
@@ -179,12 +163,12 @@
       </ul>
     </section>
 
-    <section id="programme" class="card" style="margin-top:18px;">
+    <section id="programme" class="card">
       <h2>Programme</h2>
 
       <h3>Day 1</h3>
       <table class="programme" aria-label="Day 1 programme">
-        <tr><th style="width:140px;">09:00–09:30</th><td><strong>Opening remarks</strong><br>Government of Cambodia (Minister of Planning); UN Cambodia (Jo Scheuer, Resident Coordinator); UN DESA (Matthias Bruckner, Acting Chief of DPB/EAPD)</td></tr>
+        <tr><th>09:00–09:30</th><td><strong>Opening remarks</strong><br>Government of Cambodia (Minister of Planning); UN Cambodia (Jo Scheuer, Resident Coordinator); UN DESA (Matthias Bruckner, Acting Chief of DPB/EAPD)</td></tr>
         <tr><th>09:30–10:45</th><td><strong>Cambodia: background on graduation and smooth transition</strong><br>Bunnak Poch (Ministry of Planning)</td></tr>
         <tr><th>10:45–11:15</th><td>Group photo / Coffee break</td></tr>
         <tr><th>11:15–12:30</th><td><strong>Bhutan: experience on STS</strong><br>Dorji Wanchuk (Office of the Prime Minister)</td></tr>
@@ -197,17 +181,19 @@
 
       <h3 style="margin-top:18px;">Day 2</h3>
       <table class="programme" aria-label="Day 2 programme">
-        <tr><th style="width:140px;">09:00–10:30</th><td><strong>Nepal: experience on STS</strong><br>Rajesh Gautam (National Planning Commission)</td></tr>
+        <tr><th>09:00–10:30</th><td><strong>Nepal: experience on STS</strong><br>Rajesh Gautam (National Planning Commission)</td></tr>
         <tr><th>10:30–10:50</th><td>Coffee break</td></tr>
         <tr><th>10:50–11:20</th><td><strong>Senegal: preparing for STS</strong><br>Awa Diallo (Ministry of Economy, Planning and Cooperation)</td></tr>
         <tr><th>11:20–12:30</th><td><strong>Experience of other graduating/graduated countries on STS</strong><br>ESCAP • UNCTAD • UN DESA</td></tr>
         <tr><th>12:30–13:30</th><td>Lunch</td></tr>
-        <tr><th>13:30–15:00</th><td><strong>Panel discussion: Lessons learned and knowledge exchange</strong><br>Moderator: UN DESA<ul>
-          <li>Aligning STS with National Development Plan</li>
-          <li>Institutional arrangement for STS</li>
-          <li>Inclusive preparation and implementation of STS</li>
-          <li>Monitoring and evaluation</li>
-        </ul></td></tr>
+        <tr><th>13:30–15:00</th><td><strong>Panel discussion: Lessons learned and knowledge exchange</strong><br>Moderator: UN DESA
+          <ul>
+            <li>Aligning STS with National Development Plan</li>
+            <li>Institutional arrangement for STS</li>
+            <li>Inclusive preparation and implementation of STS</li>
+            <li>Monitoring and evaluation</li>
+          </ul>
+        </td></tr>
         <tr><th>15:00–15:50</th><td>Coffee break</td></tr>
         <tr><th>15:50–16:50</th><td><strong>Panel discussion (continued)</strong><br>Moderator: UN DESA</td></tr>
         <tr><th>16:50–17:00</th><td><strong>Meeting summary and closing remarks</strong></td></tr>
@@ -215,7 +201,7 @@
       <p class="muted" style="margin-top:8px;">Note: invited speakers are to be confirmed.</p>
     </section>
 
-    <section id="organizers" class="grid" style="margin-top:18px;">
+    <section id="organizers" class="grid">
       <div class="card">
         <h2>Organizers</h2>
         <ul>
@@ -230,7 +216,7 @@
       </div>
     </section>
 
-    <section id="contact" class="card" style="margin-top:18px;">
+    <section id="contact" class="card">
       <h2>Contact</h2>
       <p><strong>Mr. Chantum Chea</strong>, Ministry of Planning, Cambodia — <a href="mailto:chantumch@gmail.com">chantumch@gmail.com</a></p>
       <p><strong>Dr. Namsuk Kim</strong>, UN DESA — <a href="mailto:kimnamsuk@un.org">kimnamsuk@un.org</a></p>
